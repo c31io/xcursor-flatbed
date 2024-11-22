@@ -1,10 +1,11 @@
-# Maintainer: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Maintainer: Celio Grand <celiogrand@outlook.com>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
 # Contributor: Roman Kyrylych <Roman.Kyrylych@gmail.com>
 # Contributor: Lee.MaRS <leemars@gmail.com>
-# Maintainer: Daniel J Griffiths <ghost1227@archlinux.us>
+# Contributor: Daniel J Griffiths <ghost1227@archlinux.us>
 
 pkgname=xcursor-flatbed
-pkgver=0.5
+pkgver=0.6.0
 pkgrel=1
 pkgdesc="Flatbed XCursor Theme"
 arch=('any')
@@ -16,8 +17,7 @@ md5sums=('SKIP')
 
 package() {
   cd "$srcdir/flatbedcursors"
-
   export ICONSDIR="$pkgdir/usr/share/icons/"
-  mkdir -p "$pkgdir/usr/share/icons/"
+  mkdir -p "$ICONSDIR"
   ./install-all
 }
